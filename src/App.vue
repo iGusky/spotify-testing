@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import {ref} from "vue";
-import api from "./config/axios";
+import useSearch from "./hooks/useSearch";
 
-const artistQuery = ref<string>("");
-const artistList = ref<any>([]);
-const searchArtist = async () => {
-  const response = await api.get(`search?type=artist&q=${artistQuery.value}`);
-  artistList.value = response.data.artists.items;
-};
+const {artistList, searchArtist, artistQuery} = useSearch()
 </script>
 
 <template>

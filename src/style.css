@@ -1,9 +1,11 @@
 
-html, #app {
+body, html, #app {
   font-family: Poppins;
-  background-color: #283952;
+  background-color: #283952 !important;
   color: white;
 }
 #app{
   padding: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
 }
